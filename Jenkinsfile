@@ -23,7 +23,7 @@ pipeline {
     stage('build') {
       steps {
         script {
-          sh "docker build -t arnabdnandy1706/postgresql:training-v1"
+          sh "docker build -t arnabdnandy1706/postgresql:training-v1 ."
       }
     }
   }
