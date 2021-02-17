@@ -17,7 +17,6 @@ pipeline {
     ARTIFACT_VERSION = '1.0.0-SNAPSHOT'
     JAVA_HOME      = "/usr/java/jdk1.8.0_191-amd64"
     MAVEN_HOME     = "/opt/maven"
-    NEXUS_CREDS = credentials('nexus-repo')
   }
 
   stages {
