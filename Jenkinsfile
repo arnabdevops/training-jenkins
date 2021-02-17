@@ -23,7 +23,7 @@ pipeline {
     stage('build') {
       steps {
         script {
-          sh "docker build -t arnabdnandy1706/postgresql:training-v1 ."
+          sh "sudo docker build -t arnabdnandy1706/postgresql:training-v1 ."
       }
     }
   }
@@ -31,7 +31,7 @@ pipeline {
   stage('push') {
       steps {
         script {
-          sh "docker push arnabdnandy1706/postgresql:training-v1"
+          sh "sudo docker push arnabdnandy1706/postgresql:training-v1"
       }
     }
   }
@@ -39,7 +39,7 @@ pipeline {
   stage('deploy') {
       steps {
         script {
-          sh "docker run -d arnabdnandy1706/postgresql:training-v1"
+          sh "sudo docker run -d arnabdnandy1706/postgresql:training-v1"
       }
     }
   }
